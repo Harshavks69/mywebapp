@@ -2,55 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Web App</title>
+    <title>Harsha's Python Web App</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #00b4db, #0083b0);
+            background: linear-gradient(120deg, #667eea, #764ba2);
             color: #fff;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            max-width: 600px;
         }
 
         h1 {
             font-size: 2.5rem;
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 20px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            animation: fadeInUp 1s ease-in-out;
+            margin-bottom: 15px;
+            animation: fadeIn 1.2s ease-out;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #ffe600;
+            font-weight: bold;
         }
 
         footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 14px;
+            margin-top: 40px;
+            font-size: 0.9rem;
             opacity: 0.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <h1>Hello, World! 🚀<br>This is my first Python Web Application!<br>Developed by <strong>Harsha Var</strong></h1>
-
-    <footer>
-        &copy; 2025 | Deployed on AWS EC2 using GitHub Actions
-    </footer>
+    <div class="card">
+        <h1>🚀 Welcome to Harsha's Web App</h1>
+        <p>This project is built using <span class="highlight">Python Flask</span> and deployed on <span class="highlight">AWS EC2</span>.</p>
+        <p>Experience the power of automation with <span class="highlight">GitHub Actions</span> CI/CD pipeline.</p>
+        <footer>© 2025 Harsha Vardhana Kumar | Powered by Cloud ⚡</footer>
+    </div>
 </body>
 </html>
