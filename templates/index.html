@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Web App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+            color: #fff;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             text-align: center;
         }
-        .container {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+
         h1 {
-            font-size: 28px;
-            line-height: 1.5;
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease-in-out;
         }
-        .footer {
-            margin-top: 20px;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
             font-size: 14px;
             opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, World!<br>This is my first Python Web App!<br><strong>Developed by Harsha</strong></h1>
-        <div class="footer">© 2025 Harsha Vardhana Kumar</div>
-    </div>
+    <h1>Hello, World! 🚀<br>This is my first Python Web Application!<br>Developed by <strong>Harsha</strong></h1>
+
+    <footer>
+        &copy; 2025 | Deployed on AWS EC2 using GitHub Actions
+    </footer>
 </body>
 </html>
