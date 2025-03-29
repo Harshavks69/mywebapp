@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)  # No need for template_folder if using default 'templates'
+app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')  # Looks in templates/ automatically
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
@@ -18,5 +18,5 @@ def contact():
 def services():
     return render_template('services.html')
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
